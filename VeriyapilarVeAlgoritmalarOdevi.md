@@ -1,0 +1,1 @@
+<p>Git dersi ödevi index.html dosyası oluşturma kısmı</p>
