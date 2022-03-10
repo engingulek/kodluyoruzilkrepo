@@ -31,3 +31,18 @@ Select title from film Where title LIKE '%t%'
 
 /*Soru 4*/
 Select * from film  WHERE title LIKE 'C%' and len(title) > 90 and rental_rate = 2.99 
+
+
+/*odev 4*/
+/*Soru 1*/
+SELECT DISTINCT replacement_cost from film
+
+/*Soru 2*/
+SELECT DISTINCT Count(*) from film
+
+/*Soru 3*/
+Select DISTINCT Count(*) from film  WHERE title LIKE 'T%' and rating = 'G'
+/*Soru 4*/
+SELECT COUNT(*) FROM country WHERE country LIKE '_____';
+
+Select Count(*) from city Where city LIKE 'R%' or city LIKE '%r'
