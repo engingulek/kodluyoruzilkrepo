@@ -17,3 +17,17 @@ Select * from film Where replacement_cost Between 12.99 and 16.99
 Select first_name,last_name from actor Where first_name in ('Penelope','Nick','Ed')
 /*Soru 3*/
 Select * from film Where rental_rate in (0.99, 2.99, 4.99) and  replacement_cost in (12.99, 15.99, 28.99)
+
+
+/*Odev 3*/
+/*Soru 1*/
+Select * from country WHERE country LIKE 'A%a'
+
+/*Soru 2*/
+Select * from country WHERE country LIKE '%n' and len(country) >= 6
+
+/*Soru 3*/
+Select title from film Where title LIKE '%t%' 
+
+/*Soru 4*/
+Select * from film  WHERE title LIKE 'C%' and len(title) > 90 and rental_rate = 2.99 
