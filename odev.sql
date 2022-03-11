@@ -55,3 +55,18 @@ Select * from film Where title Like '%n' ORDER BY length DESC LIMIT 5;
 Select * from film Where title Like '%n' Order By Length Desc offset 5 Limit 5
 /*Soru 3*/
 Select * from customer Where store_id = 1 Order by last_name Desc Limit 4
+
+
+
+
+/*Soru 6*/
+/*Soru 1*/
+Select Avg(rental_rate) from film
+/*Soru 2*/
+Select Count(title) from film Where title Like 'C%'
+/*Soru 3*/
+Select length from film Where rental_rate = 0.99 Order By  length desc Limit 1
+/*İkinci yol*/
+SELECT MAX(length) FROM film WHERE rental_rate = 0.99;
+/*Soru 4 */
+Select COUNT(DISTINCT(replacement_cost))  from film Where length > 150
