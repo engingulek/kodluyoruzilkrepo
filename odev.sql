@@ -151,3 +151,16 @@ from customer Right join payment on customer.customer_id = payment.customer_id;
 Select rental.rental_id , customer.first_name, customer.last_name from customer 
 Full join  rental on rental.customer_id = customer.customer_id
 
+--ödev 11
+/*Soru 1*/
+(Select first_name from actor)Union(Select first_name from customer)
+--Soru 2
+(Select first_name from actor)INTERSECT(Select first_name from customer)
+--Soru 3
+Select first_name from actor) EXCEPT (Select first_name from customer)
+ 
+ --Soru 4
+(Select first_name from actor)Union All (Select first_name from customer)
+(Select first_name from actor)INTERSECT All(Select first_name from customer)
+(Select first_name from actor) EXCEPT All (Select first_name from customer)
+
