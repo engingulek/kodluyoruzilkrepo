@@ -164,3 +164,26 @@ Select first_name from actor) EXCEPT (Select first_name from customer)
 (Select first_name from actor)INTERSECT All(Select first_name from customer)
 (Select first_name from actor) EXCEPT All (Select first_name from customer)
 
+-- ödev 12
+-- Soru 1
+Select Count(*) from film Where length > 
+(
+Select Avg(length) from film
+)
+
+-- Soru 2
+Select Count(*) from film where rental_rate 
+(
+Select Max(rental_rate) from film
+)
+
+-- Soru 3
+ SELECT COUNT(*) FROM Film WHERE rental_rate = 
+ (SELECT min(rental_rate) FROM Film) and replacement_cost =  
+ (SELECT min(replacement_cost) FROM Film)
+ 
+ -- Soru 4
+  SELECT customer_id, count(payment_id) 
+  FROM payment GROUP BY customer_id ORDER BY 
+  DESC
+
