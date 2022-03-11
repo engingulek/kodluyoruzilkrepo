@@ -104,3 +104,28 @@ Select rental_rate,count(*) from film group by rental_rate having count(rental_r
 Select store_id ,Count(*) from customer group by store_id
 /*Soru 4*/
 Select country_id,Count(*) from city group by country_id order by COUNT(*) DESC Limit 1
+
+
+
+
+
+/*Soru 1*/
+Create Table employee (
+id Serial Primary Key,
+name VARCHAR(50) Not Null,
+email VARCHAR(100),
+birthday DATE)
+
+/*Soru2*/
+/*50 tane veri eklemiştir.*/
+
+/*soru 3*/
+ UPDATE employee
+ SET name='engin',
+     email='engingulek@gmail.com'
+  WHERE id  BETWEEN 1 AND 5
+  RETURNING *;
+  
+  /*Soru 4*/
+    DELETE FROM employee
+  WHERE id>45;
