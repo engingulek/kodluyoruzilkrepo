@@ -107,7 +107,7 @@ Select country_id,Count(*) from city group by country_id order by COUNT(*) DESC 
 
 
 
-
+/*Ödev 8*/
 
 /*Soru 1*/
 Create Table employee (
@@ -129,3 +129,14 @@ birthday DATE)
   /*Soru 4*/
     DELETE FROM employee
   WHERE id>45;
+  
+  
+  
+  /*Ödev 9*/
+/*Soru 1*/
+Select city.city, country.country from city Join country on city.country_id = country.country_id
+/*Soru 2*/
+Select  payment.payment_id,customer.first_name,customer.last_name from customer Join  payment  on customer.customer_id =  payment.customer_id
+/*Soru 3*/
+Select rental.rental_id,customer.first_name,customer.last_name from customer Join rental on customer.customer_id = rental.customer_id
+
