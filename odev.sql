@@ -46,3 +46,12 @@ Select DISTINCT Count(*) from film  WHERE title LIKE 'T%' and rating = 'G'
 SELECT COUNT(*) FROM country WHERE country LIKE '_____';
 
 Select Count(*) from city Where city LIKE 'R%' or city LIKE '%r'
+
+/*odev 5*/
+
+/*Soru 1*/
+Select * from film Where title Like '%n' ORDER BY length DESC LIMIT 5;
+/*Soru 2*/
+Select * from film Where title Like '%n' Order By Length Desc offset 5 Limit 5
+/*Soru 3*/
+Select * from customer Where store_id = 1 Order by last_name Desc Limit 4
