@@ -70,3 +70,14 @@ Select length from film Where rental_rate = 0.99 Order By  length desc Limit 1
 SELECT MAX(length) FROM film WHERE rental_rate = 0.99;
 /*Soru 4 */
 Select COUNT(DISTINCT(replacement_cost))  from film Where length > 150
+
+
+/*Ödev 7*/
+/*Soru 1*/
+Select rental_rate,Count(rental_rate) from film group by rental_rate
+/*Soru 2*/
+Select rental_rate,count(*) from film group by rental_rate having count(rental_rate)>50
+/*Soru 3*/
+Select store_id ,Count(*) from customer group by store_id
+/*Soru 4*/
+Select country_id,Count(*) from city group by country_id order by COUNT(*) DESC Limit 1
