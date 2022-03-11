@@ -32,6 +32,29 @@ Select title from film Where title LIKE '%t%'
 /*Soru 4*/
 Select * from film  WHERE title LIKE 'C%' and len(title) > 90 and rental_rate = 2.99 
 
+/*Odev 8*/
+
+/*Soru 1*/
+Create Table employee (
+id Serial Primary Key,
+name VARCHAR(50) Not Null,
+email VARCHAR(100),
+birthday DATE)
+
+/*Soru2*/
+/*50 tane veri eklemiştir.*/
+
+/*soru 3*/
+ UPDATE employee
+ SET name='engin',
+     email='engingulek@gmail.com'
+  WHERE id  BETWEEN 1 AND 5
+  RETURNING *;
+  
+  /*Soru 4*/
+    DELETE FROM employee
+  WHERE id>45;
+
 
 /*odev 4*/
 /*Soru 1*/
